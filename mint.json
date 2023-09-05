@@ -63,14 +63,44 @@
     {
       "group": "API Documentation",
       "pages": ["api-reference/authentication"]
+    }, 
+    {
+      "group": "Auth Controller",
+      "pages": [
+        "api-reference/auth-controller/post-apiauthauthenticate",
+        "api-reference/auth-controller/post-apiauthforgot-password",
+        "api-reference/auth-controller/post-apiauthrefresh-token",
+        "api-reference/auth-controller/post-apiauthsign-up"
+      ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Greeting",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/greeting/get-apigreeting",
+        "api-reference/greeting/post-apigreeting",
+        "api-reference/greeting/put-apigreeting",
+        "api-reference/greeting/delete-apigreeting",
+        "api-reference/greeting/get-apigreeting-1"
+      ]
+    },
+    {
+      "group": "Profiles",
+      "pages": [
+        "api-reference/profiles/get-apiprofile",
+        "api-reference/profiles/post-apiprofile",
+        "api-reference/profiles/get-apiprofile-1",
+        "api-reference/profiles/put-apiprofile",
+        "api-reference/profiles/delete-apiprofile"
+      ]
+    },
+    {
+      "group": "Users",
+      "pages": [
+        "api-reference/users/get-apiusers",
+        "api-reference/users/post-apiusers",
+        "api-reference/users/get-apiusers-1",
+        "api-reference/users/put-apiusers",
+        "api-reference/users/delete-apiusers"
       ]
     }
   ],
