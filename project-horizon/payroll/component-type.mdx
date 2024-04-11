@@ -1,0 +1,32 @@
+---
+title: "Component Type"
+description: "Salary components of the Payslip"
+---
+ 
+<img src="/images/payroll/salary-component-types.png" style={{ borderRadius: '0.5rem' }}/>
+ 
+These are the categories of salary components, each containing types indicating whether the component is earnings or deductions.
+ 
+ 
+## Creating a component type
+
+<Frame>
+  <img src="/images/payroll/salary-component-types-form.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame>  
+Define Salary Types with Clarity and Control
+  
+## Fields
+
+<ParamField body="Name" type="string"  required>
+Name of component type
+</ParamField>
+<ParamField body="Description" type="string"  required>
+Description of component type
+</ParamField>
+<ParamField body="Type" type="string"  required>
+Whether if the component type is Earning or Deductions
+</ParamField>
+<ParamField body="Is Fixed?" type="boolean">
+Check if the salary component type is fixed amount, or if variable
+</ParamField> 
+

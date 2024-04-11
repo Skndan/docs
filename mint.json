@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Skndan",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -30,27 +30,10 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "Horizon",
+      "url": "project-horizon"
     }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
+  ], 
   "navigation": [
     {
       "group": "Get Started",
@@ -61,52 +44,18 @@
       "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
     },
     {
-      "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
+      "group": "Introduction",
+      "pages": ["project-horizon/get-started"]
     }, 
     {
-      "group": "Auth Controller",
+      "group": "Payroll",
       "pages": [
-        "api-reference/auth-controller/post-apiauthauthenticate",
-        "api-reference/auth-controller/post-apiauthforgot-password",
-        "api-reference/auth-controller/post-apiauthrefresh-token",
-        "api-reference/auth-controller/post-apiauthsign-up"
-      ]
-    },
-    {
-      "group": "Greeting",
-      "pages": [
-        "api-reference/greeting/get-apigreeting",
-        "api-reference/greeting/post-apigreeting",
-        "api-reference/greeting/put-apigreeting",
-        "api-reference/greeting/delete-apigreeting",
-        "api-reference/greeting/get-apigreeting-1"
-      ]
-    },
-    {
-      "group": "Profiles",
-      "pages": [
-        "api-reference/profiles/get-apiprofile",
-        "api-reference/profiles/post-apiprofile",
-        "api-reference/profiles/get-apiprofile-1",
-        "api-reference/profiles/put-apiprofile",
-        "api-reference/profiles/delete-apiprofile"
-      ]
-    },
-    {
-      "group": "Users",
-      "pages": [
-        "api-reference/users/get-apiusers",
-        "api-reference/users/post-apiusers",
-        "api-reference/users/get-apiusers-1",
-        "api-reference/users/put-apiusers",
-        "api-reference/users/delete-apiusers"
+        "project-horizon/payroll/introduction",
+        "project-horizon/payroll/schedule",
+        "project-horizon/payroll/component-type",
+        "project-horizon/payroll/salary-components",
+        "project-horizon/payroll/salary-templates"
       ]
     }
-  ],
-  "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  }
+  ]
 }

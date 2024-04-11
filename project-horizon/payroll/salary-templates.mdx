@@ -1,0 +1,62 @@
+---
+title: "Salary Templates"
+description: "Create and manage salary templates"
+---
+  
+<Frame>
+  <img  src="/images/payroll/salary-template.png"/>
+</Frame> 
+
+The salary template simplifies the assignment of salary components to employees, enabling easy configuration for each role. When creating a new employee, associate the appropriate salary template and adjust values as needed, including changes to the Cost to Company (CTC).
+ 
+## Mapping
+<Frame>
+  <img  src="/images/payroll/salary-template-flow.png"/>
+</Frame> 
+
+<CardGroup cols={1}>
+  <Card title="Create a component type" icon="square-1">
+    Component types categorize various salary components.
+  </Card>
+  <Card title="Salary Component" icon="square-2">
+    To create a salary component, extend the existing component type.
+  </Card>
+  <Card title="Salary Template" icon="square-3">
+    When creating a salary template, simply select the desired component type, and the system will automatically retrieve the relevant salary components. 
+     <br/>
+    <Accordion title="Please note before creating salary template.">
+      At present, the system maps one component type to one salary component type. In the future, you'll have the flexibility to associate multiple salary components with a single component type.
+    </Accordion>
+  </Card> 
+</CardGroup> 
+
+## Salary template
+
+<Frame>
+  <img src="/images/payroll/salary-template-form.png"/>
+</Frame>  
+<Note>Add the CTC first to enable the Add Component button</Note>
+By clicking on the Add component, you will see list of Component type, by clicking the component type, salary component related to that component will be popuplated in the table
+<Frame>
+  <img src="/images/payroll/salary-template-dropdown.png"/>
+</Frame>  
+
+### Form
+
+<Frame>
+  <img src="/images/payroll/salary-template-form-2.png"/>
+</Frame>  
+When adding salary components, you can view them categorized by component type. Modify values or remove components as necessary. At the bottom of the table, the Cost to Company (CTC) is highlighted. Any remaining amount will automatically be added to the fixed allowance. Additionally, every salary template will include the Fixed Allowance, regardless of roles or designations.
+<Info>
+  Fixed allowance is a residual component of salary that is left after allocations are made for all other components.
+</Info>
+
+
+### Fields
+ <br/>
+<ParamField body="Template Name" type="string"  required>
+Name of the template
+</ParamField>
+<ParamField body="Template Description" type="string"  required>
+Description of the template
+</ParamField> 

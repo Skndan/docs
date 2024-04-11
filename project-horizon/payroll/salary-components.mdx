@@ -1,0 +1,81 @@
+---
+title: "Salary Components"
+description: "Manage salary components"
+---
+
+## Setting up
+
+Primarily, there are two types of components: earnings and deductions. Each salary component serves as a line item on the Payslip and is utilized during the creation of the salary template.
+ 
+
+## Earnings
+<Frame>
+  <img src="/images/payroll/salary-components-earnings.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame> 
+
+Earnings are part of the gross salary.
+
+## Earnings Form
+<Frame>
+  <img src="/images/payroll/earning-form.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame> 
+<br />
+<ParamField body="Earning Type" type="string" required>
+Select the Component type. A component type can have multiple salary components.
+</ParamField>
+<ParamField body="Earning Name" type="string" required>
+Earning name, eg. Basic
+</ParamField>
+<ParamField body="Name on Payslip" type="string" required>
+Earning name, eg. Basic Salary 
+</ParamField>
+<ParamField body="Calculation Type" type="string" required>
+By what percentage or fixed amount should be taken from the CTC
+
+<Warning>If you adding Basic then don't select the "Percentage of Basic"</Warning>
+</ParamField> 
+<ParamField body="Amount / Value" type="number" required>
+Flat amount or percentage
+</ParamField>
+<ParamField body="Active" type="boolean" default="false" required>
+Make the component as active
+</ParamField>
+
+## Deductions
+
+<Frame>
+  <img src="/images/payroll/salary-components-deductions.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame>
+
+Deductions are subtracted from the gross salary components.
+  
+## Deductions Form
+
+<Frame>
+  <img src="/images/payroll/deduction-form.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame>
+ <br />
+<ParamField body="Deduction Type" type="string" required>
+Select the Component type. A component type can have multiple salary components.
+</ParamField>
+<ParamField body="Deduction Name" type="string" required>
+Deduction name, eg. Basic
+</ParamField>
+<ParamField body="Name on Payslip" type="string" required>
+Deduction name, eg. Basic Salary 
+</ParamField>
+<ParamField body="Calculation Type" type="string" required>
+By what percentage or fixed amount should be taken from the CTC
+
+<Warning>If you adding Basic then don't select the "Percentage of Basic"</Warning>
+</ParamField> 
+<ParamField body="Amount / Value" type="number" required>
+Flat amount or percentage
+</ParamField>
+<ParamField body="Active" type="boolean" default="false" required>
+Make the component as active
+</ParamField>
+
+<Card title="Note" icon="note">
+Earnings and deductions follow the same schema, but their usage differs based on the type selected in the form.
+</Card>
