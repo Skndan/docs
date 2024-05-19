@@ -33,20 +33,41 @@
       "name": "Horizon",
       "url": "project-horizon"
     }
-  ], 
+  ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": [
+        "introduction",
+        "quickstart",
+        "development"
+      ]
     },
     {
       "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation"
+      ]
     },
     {
       "group": "Introduction",
-      "pages": ["project-horizon/get-started"]
-    }, 
+      "pages": [
+        "project-horizon/get-started"
+      ]
+    },
+    {
+      "group": "Organisation",
+      "pages": [
+        "project-horizon/organisation/employee",
+        "project-horizon/organisation/department",
+        "project-horizon/organisation/locations",
+        "project-horizon/organisation/settings"
+      ]
+    },
     {
       "group": "Payroll",
       "pages": [

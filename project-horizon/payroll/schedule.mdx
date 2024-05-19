@@ -3,6 +3,16 @@ title: "Schedules"
 description: "Payroll schedules"
 ---
  
+
+## When you process payrolls
+
+<Frame>
+  <img  src="/images/payroll/pay-schedule-3.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame>
+
+When processing payroll, kindly specify whether you intend to pay the previous month's salary in the current month or within the same month.
+
+
 ## Payslip Processing
 
 <Frame>
@@ -10,6 +20,8 @@ description: "Payroll schedules"
 </Frame> 
 
 Configure the processing date for Payslip generation in the CRON job setup. Payslips will be generated based on submitted timesheets. If an employee fails to submit their timesheet, their salary will not be calculated automatically.
+
+We calculate earnings and deductions, making them available to employees for review and correction in their "My Spaces" area. They can then download their payslips from there.
 
 <Info>Manual overrides are possible</Info>
 
@@ -19,6 +31,15 @@ Configure the processing date for Payslip generation in the CRON job setup. Pays
   <img  src="/images/payroll/pay-schedule-2.png"  style={{ borderRadius: '0.5rem' }}/>
 </Frame> 
 
-Currently, the organization has a designated pay day on which salaries are scheduled to be credited to employees' accounts.
+This is the pay date configuration, where employee's payroll will be dispersed directly to their bank accounts.
  
 <Warning>This feature is not operational due to the absence of connectivity with the bank accounts</Warning>
+
+
+## Pay cycle
+
+<Frame>
+  <img  src="/images/payroll/pay-schedule-4.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame>
+
+This feature allows you to configure your pay cycle by specifying the exact dates when it begins and ends. By defining the start and end dates of your pay cycle, you can effectively manage the timing of payroll processing and ensure accurate and timely payment to your employees.
