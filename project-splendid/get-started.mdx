@@ -1,0 +1,60 @@
+---
+title: "Splendid Architecture"
+description: "Ease up your flutter architecture"
+---
+
+# Overview
+
+Splendid is the beta framework for production level flutter applications.For teams or solo developers that require high-quality code, Splendid simplifies the development and maintenance of production Flutter applications. We know what is required to build big, scalable, testable and maintainable applications, this is the core focus of Splendid.
+
+<AccordionGroup>
+  <Accordion title="Scalable" icon="arrow-trend-up">
+     Splendid is built to make your team scalable and keep your productivity high. With good code conventions and a strong opinion on how to develop functionality, you or your team will have a clear guide around adding and maintaining features.
+  </Accordion>
+
+  <Accordion title="Testable" icon="flask">
+    We put an emphasis on unit tests and our MVVM architecture is designed to make unit testing any part of your business logic or state as easy as possible.
+  </Accordion>
+
+  <Accordion title="Maintainable" icon="book">
+    We have strong opinions on separation of concerns. This, in combination with our strict coding principles, will allow you to scale your code consistently and without the worry of it turning into spaghetti as you grow.
+  </Accordion>
+</AccordionGroup>
+
+## Clone the repo
+
+<Note>Make sure that you have Flutter installed and set up. If not, head over to [Flutter](https://docs.flutter.dev/get-started/install) Install to get it setup.</Note>
+
+```shell
+git clone https://github.com/balajimalathi/Flutter-MVVM.git
+```
+
+## Getting Started
+
+1. Run this command to get the packages installed
+```
+flutter pub get
+```
+
+2. To update all the packages to the latest version
+```
+flutter pub upgrade --major-versions
+```
+
+3. Run this command to change the package name replace `com.new.package.name` to your package name
+```
+flutter pub run change_app_package_name:main com.new.package.name
+```
+
+<Note>Remove the `change_app_package_name` package from `pubspec.yaml`, if needed.</Note>
+
+4. Run this Windows command to remove the .git from the repo from the root folder
+```
+rd /s /q ".git"
+```
+5. Configure Dart SDK path
+------------------------------------
+
+## License
+
+MIT

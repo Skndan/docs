@@ -32,6 +32,10 @@
     {
       "name": "Horizon",
       "url": "project-horizon"
+    },
+    {
+      "name": "Splendid",
+      "url": "project-splendid"
     }
   ],
   "navigation": [
@@ -76,6 +80,18 @@
         "project-horizon/payroll/component-type",
         "project-horizon/payroll/salary-components",
         "project-horizon/payroll/salary-templates"
+      ]
+    },
+    {
+      "group": "Introduction",
+      "pages": [
+        "project-splendid/get-started"
+      ]
+    },
+    {
+      "group": "Folder Structure",
+      "pages": [
+        "project-splendid/folder-structure/introduction"
       ]
     }
   ]
