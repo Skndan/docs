@@ -52,17 +52,7 @@
       "pages": [
         "setup/keycloak"
       ]
-    },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation"
-      ]
-    },
+    }, 
     {
       "group": "Introduction",
       "pages": [

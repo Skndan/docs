@@ -3,24 +3,76 @@ title: 'Keycloak'
 description: 'Keycloak Auth Server Setup'
 icon: 'shield-halved'
 ---
+## Setup your development
 
-<Frame>
-  <img src="/images/keycloak/auth-screen.png"  style={{ borderRadius: '0.5rem' }}/>
-</Frame>
+Learn how to setup keycloak in ubuntu server.
 
-<Frame>
-  <img src="/images/keycloak/home-screen.png"  style={{ borderRadius: '0.5rem' }}/>
-</Frame>
+<AccordionGroup>
+<Accordion icon="terminal" title="Login in to server">
+    Keycloak requires Java to run. Install OpenJDK 11, a reliable and stable Java version, on your Ubuntu server to meet this requirement.
+    ```shell
+    ssh root@37.27.185.7
+    ```
+  </Accordion>
+ 
+  <Accordion icon="terminal" title="Install Java for Keycloak">
+    Keycloak requires Java to run. Install OpenJDK 21, a reliable and stable Java version, on your Ubuntu server to meet this requirement.
+    ```bash 
+    sudo apt-get update -y 
+    sudo apt-get upgrade -y 
+    sudo apt-get install default-jdk -y 
+    java --version 
+    ```
+  </Accordion>
 
+  <Accordion icon="download" title="Download Keycloak">
+    Head over to the official Keycloak website and download the latest stable release. Alternatively, you can use `wget` to download it directly to your server.
+    ```bash
+    wget https://github.com/keycloak/keycloak/releases/download/<version>/keycloak-<version>.tar.gz
+    ```
+  </Accordion>
+
+  <Accordion icon="box-archive" title="Extract Keycloak">
+    Extract the Keycloak package to a directory where you want to run the Keycloak instance.
+    ```bash
+    mv keycloak-25.0.4 /opt/keycloak
+    ```
+  </Accordion>
+
+  <Accordion icon="gear" title="Create a Systemd Service for Keycloak">
+    To manage Keycloak more easily, write a systemd service that can start, stop, and enable Keycloak as a service that runs on boot. 
+    Create `/etc/systemd/system/keycloak.service` and add the service configurations to manage Keycloak.
+  </Accordion>
+
+  <Accordion icon="globe" title="Set Up Nginx as a Reverse Proxy">
+    Configure Nginx as a reverse proxy to route traffic to Keycloak running on localhost. This allows you to secure Keycloak with SSL and manage requests.
+    Edit the Nginx configuration file to proxy requests from `yourdomain.com` to `localhost:8080`.
+  </Accordion>
+
+  <Accordion icon="lock" title="Install and Configure SSL with Certbot">
+    Secure your Keycloak server with SSL by installing Certbot and generating a free SSL certificate using Let's Encrypt. Set up automatic renewal for the SSL certificate.
+    ```bash
+    /etc/letsencrypt/live/<domain>/fullchain.pem 
+    /etc/letsencrypt/live/<domain>/privkey.pem
+    ```
+  </Accordion>
+
+  <Accordion icon="database" title="Configure a Database for Keycloak">
+    Although Keycloak comes with an embedded H2 database, it's recommended to use a more robust database like PostgreSQL or MySQL for production. 
+    Install your database, create a Keycloak database, and modify the configuration to point to it in `keycloak.conf`.
+  </Accordion>
+
+    <Accordion icon="globe" title="Access Keycloak">
+     Once everything is properly setup, keycloak will be accessed though the internet.
 ```
 https://auth.skndan.com:8443/admin/master/console/
 ```
+  </Accordion>
+</AccordionGroup>
 
-```shell
-ssh root@37.27.185.7
-```
 
-### Keycloak Installation
+
+## Keycloak Installation
 
 **Java Installation**
 ```
@@ -45,7 +97,7 @@ tar -xvzf keycloak-25.0.4.tar.gz
 mv keycloak-25.0.4 /opt/keycloak
 ```
 
-### Run
+## Run
 
 ``` shell
 /opt/keycloak/bin/kc.sh start
@@ -108,7 +160,11 @@ root@ubuntu-auth:/# sudo systemctl status keycloak
 sudo netstat -tlnp | grep 8080 
 sudo netstat -tlnp | grep 8443
 ```
-### Keycloak Setup
+<Note>Localhost port is `8080` and production port is `8443`</Note>
+
+
+
+## Keycloak Setup
 
 ```shell
 vim /opt/keycloak/conf/keycloak.conf
@@ -160,7 +216,7 @@ adminUrl=https://auth.skndan.com
 ```
 
 
-### SSL 
+## SSL 
 
 We have install certification for our server using certbot, certificates can be found in the following location.
 
@@ -176,7 +232,7 @@ sudo cp /etc/letsencrypt/live/auth.skndan.com/fullchain.pem /opt/keycloak/conf/
 sudo cp /etc/letsencrypt/live/auth.skndan.com/privkey.pem /opt/keycloak/conf/
 ```
 
-### Postgres Setup
+## Postgres Setup
 
 ```shell
 vim /etc/postgresql/16/main/pg_hba.conf
@@ -320,3 +376,11 @@ host    replication     all             ::1/128                 scram-sha-256
 # Remove this when moving to prod, added this to access Keycloak database through Dbeaver
 hostssl    keycloak    postgres    0.0.0.0/0            md5 
 ```
+## Access Keycloak
+<Frame>
+  <img src="/images/keycloak/auth-screen.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame>
+
+<Frame>
+  <img src="/images/keycloak/home-screen.png"  style={{ borderRadius: '0.5rem' }}/>
+</Frame>
