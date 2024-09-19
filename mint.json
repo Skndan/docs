@@ -48,6 +48,12 @@
       ]
     },
     {
+      "group": "Setup",
+      "pages": [
+        "setup/keycloak"
+      ]
+    },
+    {
       "group": "Essentials",
       "pages": [
         "essentials/markdown",
