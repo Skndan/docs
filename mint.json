@@ -50,7 +50,8 @@
     {
       "group": "Setup",
       "pages": [
-        "setup/keycloak"
+        "setup/keycloak",
+        "setup/apache"
       ]
     }, 
     {

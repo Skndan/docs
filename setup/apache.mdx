@@ -1,0 +1,63 @@
+---
+title: 'Apache'
+description: 'Apache Server Setup'
+icon: 'server'
+---
+
+## Switching Domain Name in Apache Server
+
+### Update DNS Settings
+
+- Log in to your domain registrar's dashboard for `srividhyanaturals.com`.
+- Update the DNS records to point to the server's IP address where Apache is hosting your site.
+    - A record for `@` (root domain) pointing to your server's IP.
+    - CNAME record for www pointing to `srividhyanaturals.com` (optional but recommended).
+    - Allow up to 24 hours for the DNS changes to propagate.
+
+### Update Apache Configuration
+- Locate the Apache configuration file for your current domain. This is typically stored in:
+
+```bash
+/etc/apache2/sites-available/
+```
+- Open the virtual host configuration file for `shuddaura.com` using a text editor:
+
+```bash
+sudo nano /etc/apache2/sites-available/shuddaura.com.conf
+```
+- Update the ServerName and ServerAlias directives to use `srividhyanaturals.com`:
+
+```conf
+<VirtualHost *:80>
+    ServerName srividhyanaturals.com
+    ServerAlias www.srividhyanaturals.com
+
+    DocumentRoot /var/www/html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+- Save and exit the file.
+
+- Disable the old virtual host
+
+```bash
+sudo a2dissite shuddaura.com.conf
+```
+- Enable the new one
+```bash
+sudo a2ensite srividhyanaturals.com.conf
+```
+
+- Test the Apache configuration:
+
+```bash
+sudo apachectl configtest
+```
+
+- Reload Apache to apply changes:
+```bash
+sudo systemctl reload apache2
+```
+
